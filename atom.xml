@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Allen-Ge's Blog]]></title>
+  <subtitle><![CDATA[Keep studying.]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://allen-ge.github.io/"/>
+  <updated>2015-12-09T09:03:08.783Z</updated>
+  <id>http://allen-ge.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Allen-Ge]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Git 命令备忘]]></title>
+    <link href="http://allen-ge.github.io/2015/12/09/gitCommand/"/>
+    <id>http://allen-ge.github.io/2015/12/09/gitCommand/</id>
+    <published>2015-12-09T08:41:10.000Z</published>
+    <updated>2015-12-09T09:03:08.783Z</updated>
+    <content type="html"><![CDATA[<p><strong>本文仅仅用作git 命令的备忘</strong></p>
+<h3 id="u8BBE_u7F6E_u7528_u6237_u540D_u548Cemail"><a href="#u8BBE_u7F6E_u7528_u6237_u540D_u548Cemail" class="headerlink" title="设置用户名和email"></a>设置用户名和email</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"Your Name"</span></span><br><span class="line">$ git config --global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
+<h3 id="u521B_u5EFA_u672C_u5730_u5E93"><a href="#u521B_u5EFA_u672C_u5730_u5E93" class="headerlink" title="创建本地库"></a>创建本地库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;localdir&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;localdir&gt;</span><br><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+<h3 id="u901A_u8FC7git_init_u547D_u4EE4_u628A_u8FD9_u4E2A_u76EE_u5F55_u53D8_u6210Git_u53EF_u4EE5_u7BA1_u7406_u7684_u4ED3_u5E93"><a href="#u901A_u8FC7git_init_u547D_u4EE4_u628A_u8FD9_u4E2A_u76EE_u5F55_u53D8_u6210Git_u53EF_u4EE5_u7BA1_u7406_u7684_u4ED3_u5E93" class="headerlink" title="通过git init命令把这个目录变成Git可以管理的仓库"></a>通过git init命令把这个目录变成Git可以管理的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<h3 id="u751F_u6210SSH"><a href="#u751F_u6210SSH" class="headerlink" title="生成SSH"></a>生成SSH</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@example.com"</span>   <span class="comment">#Windows 在C:\Users\yourname\.ssh\id_rsa.pub中可以看到SSH 配置到你的profile中</span></span><br></pre></td></tr></table></figure>
+<h3 id="u514B_u9686_u8FDC_u7A0B_u5E93"><a href="#u514B_u9686_u8FDC_u7A0B_u5E93" class="headerlink" title="克隆远程库"></a>克隆远程库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:yourName/yourRespository.git</span><br></pre></td></tr></table></figure>
+<h3 id="u83B7_u53D6_u670D_u52A1_u5668_u7AEFcode"><a href="#u83B7_u53D6_u670D_u52A1_u5668_u7AEFcode" class="headerlink" title="获取服务器端code"></a>获取服务器端code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<h3 id="u4E0A_u4F20_u672C_u5730_u4FEE_u6539_u5728_u8FDC_u7A0B_u5E93"><a href="#u4E0A_u4F20_u672C_u5730_u4FEE_u6539_u5728_u8FDC_u7A0B_u5E93" class="headerlink" title="上传本地修改在远程库"></a>上传本地修改在远程库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h3 id="u770B_u8BB0_u5F55_uFF0C_u770B_u54EA_u4E9B_u4EBA_u505A_u4E86_u63D0_u4EA4"><a href="#u770B_u8BB0_u5F55_uFF0C_u770B_u54EA_u4E9B_u4EBA_u505A_u4E86_u63D0_u4EA4" class="headerlink" title="看记录，看哪些人做了提交"></a>看记录，看哪些人做了提交</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h3 id="u56DE_u9000_u5230_u4E0A_u4E00_u4E2A_u7248_u672C"><a href="#u56DE_u9000_u5230_u4E0A_u4E00_u4E2A_u7248_u672C" class="headerlink" title="回退到上一个版本"></a>回退到上一个版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+<h3 id="u56DE_u9000_u5230_u67D0_u4E00_u4E2A_u7248_u672C"><a href="#u56DE_u9000_u5230_u67D0_u4E00_u4E2A_u7248_u672C" class="headerlink" title="回退到某一个版本"></a>回退到某一个版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard <span class="number">3628164</span> <span class="comment">#版本号</span></span><br></pre></td></tr></table></figure>
+<h3 id="u64A4_u9500_u4FEE_u6539"><a href="#u64A4_u9500_u4FEE_u6539" class="headerlink" title="撤销修改"></a>撤销修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- readme.txt</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>本文仅仅用作git 命令的备忘</strong></p>
+<h3 id="u8BBE_u7F6E_u7528_u6237_u540D_u548Cemail"><a href="#u8BBE_u7F6E_u7528_u6237_u540D_u548Cemail]]>
+    </summary>
+    
+      <category term="git" scheme="http://allen-ge.github.io/tags/git/"/>
+    
+      <category term="SCM" scheme="http://allen-ge.github.io/categories/SCM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://allen-ge.github.io/2015/12/09/hello-world/"/>
+    <id>http://allen-ge.github.io/2015/12/09/hello-world/</id>
+    <published>2015-12-09T08:26:43.168Z</published>
+    <updated>2015-12-09T08:26:43.168Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
